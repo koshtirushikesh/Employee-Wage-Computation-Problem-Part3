@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Employee emplaye= new Employee();
-            emplaye.SwitchCase();
+            emplaye.WagesforMonth();
         }
     }
 }

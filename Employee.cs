@@ -24,6 +24,7 @@ namespace EmployeeWageProblem3
             while (totalEmpHour < NUM_OF_WORKING_HOUR && totalWorkingDay < NUM_OF_WORKING_DAYS)
             {
                 totalWorkingDay++;
+
                 Random random = new Random();
                 int empCheck = random.Next(3);
 

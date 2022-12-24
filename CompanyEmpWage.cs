@@ -5,7 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace EmployeeWageProblem3
+
 {
+    interface IComputeEmpWage
+    {
+         void addCompanyEmpWage(string company, int EMP_RATE_PER_HOUR, int MAX_OF_WORKING_DAYS, int MAX_OF_WORKING_HOUR);
+         void computeEmpWage();
+        
+    }
+
     public class CompanyEmpWage
     {
         public string company;

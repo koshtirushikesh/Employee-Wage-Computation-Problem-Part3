@@ -4,13 +4,11 @@
     {
         static void Main(string[] args)
         {
-            EmpWageBuilder dmart = new EmpWageBuilder("Dmart", 10, 4, 20);
-            dmart.WagesforMonth();
-            Console.WriteLine(dmart.tostring());
+            EmpWageBuilderArray empWageBuilderArray = new EmpWageBuilderArray();
+            empWageBuilderArray.addCompanyEmpWage("Dmart", 20, 2, 10);
+            empWageBuilderArray.addCompanyEmpWage("reliance", 10, 4, 20);
+            empWageBuilderArray.computeEmpWage();
 
-            EmpWageBuilder reliance = new EmpWageBuilder("Reliance", 10, 4, 20);
-            reliance.WagesforMonth();
-            Console.WriteLine(reliance.tostring());
         }
     }
 }

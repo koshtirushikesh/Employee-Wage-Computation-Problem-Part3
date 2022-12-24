@@ -4,8 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Employee emplaye= new Employee();
-            emplaye.WagesforMonth();
+            ComputeEmpWage computeEmpWage = new ComputeEmpWage();
+            computeEmpWage.WagesforMonth("dmart", 20, 3, 10);
+            computeEmpWage.WagesforMonth("Reliance", 10, 4, 20);
         }
     }
 }

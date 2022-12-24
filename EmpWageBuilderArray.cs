@@ -12,16 +12,17 @@ namespace EmployeeWageProblem3
         public const int IS_PART_TIME = 2;
 
         private int numOfCompany = 0;
-        private CompanyEmpWage[] CompanyEmpWageArray;
+        private List<CompanyEmpWage> CompanyEmpWageArrayList;
 
         public EmpWageBuilderArray()
         {
-            this.CompanyEmpWageArray = new CompanyEmpWage[5];
+            this.CompanyEmpWageArrayList = new List<CompanyEmpWage>();
         }
 
         public void addCompanyEmpWage(string company, int EMP_RATE_PER_HOUR, int MAX_OF_WORKING_DAYS, int MAX_OF_WORKING_HOUR)
         {
-            CompanyEmpWageArray[this.numOfCompany] = new CompanyEmpWage(company, EMP_RATE_PER_HOUR, MAX_OF_WORKING_DAYS, MAX_OF_WORKING_HOUR);
+            CompanyEmpWage companyEmpWage = new CompanyEmpWage(company, EMP_RATE_PER_HOUR, MAX_OF_WORKING_DAYS, MAX_OF_WORKING_HOUR);
+            this.CompanyEmpWageArrayList.Add(companyEmpWage);
             numOfCompany++;
         }
 
@@ -29,13 +30,11 @@ namespace EmployeeWageProblem3
         {
             for (int i = 0;i<numOfCompany;i++)
             {
-                int num = this.computeEmpWage(this.CompanyEmpWageArray[i]);
-                CompanyEmpWageArray[i].setTotalEmpWage(num);
-                Console.WriteLine(this.CompanyEmpWageArray[i].tostring());
+                int num = this.computeEmpWage(this.CompanyEmpWageArrayList[i]);
+                CompanyEmpWageArrayList[i].setTotalEmpWage(num);
+                Console.WriteLine(this.CompanyEmpWageArrayList[i].tostring());
             }
         }
-
-
 
         public int computeEmpWage(CompanyEmpWage companyEmpWage)
         {
